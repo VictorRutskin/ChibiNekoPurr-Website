@@ -61,7 +61,15 @@
     }
   }
   
+  .link-card .custom-link-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 6px;
+    padding: 3px;
+  }
 
+  
 .link-card {
   display: flex;
   align-items: center;

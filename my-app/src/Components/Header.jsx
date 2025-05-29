@@ -20,9 +20,6 @@ export default function Header() {
         <NavLink to="/wiki" className="nav-link" data-text="Game Wiki">
           <FontAwesomeIcon icon={faBookOpen} /> Game Wiki
         </NavLink>
-        <NavLink to="/links" className="nav-link" data-text="Links">
-          <FontAwesomeIcon icon={faLink} /> Links
-        </NavLink>
       </nav>
     </header>
   );

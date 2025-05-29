@@ -5,7 +5,6 @@ import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import MyCats from "./Pages/MyCats";
 import GameWiki from "./Pages/GameWiki";
-import Links from "./Pages/Links";
 import "./App.css";
 
 function App() {
@@ -16,7 +15,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cats" element={<MyCats />} />
         <Route path="/wiki" element={<GameWiki />} />
-        <Route path="/links" element={<Links />} />
+        <Route path="*" element={<Home />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>
