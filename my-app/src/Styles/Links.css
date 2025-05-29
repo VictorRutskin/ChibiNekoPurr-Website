@@ -1,0 +1,153 @@
+.links-page-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: linear-gradient(135deg, #892be2 0%, #4f0dd2 100%); */
+  padding-top: 40px;
+}
+
+.links-profile {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.profile-avatar {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 4px solid #ff00ff;
+  margin-bottom: 16px;
+  box-shadow: 0 0 24px #0006;
+  object-fit: cover;
+  background: #220043;
+}
+
+.profile-username {
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-shadow: 0 0 8px #ff00ff, 0 0 4px #00ffff;
+}
+
+.profile-bio {
+  color: #e5e5e5;
+  font-size: 1.1em;
+  margin-bottom: 0;
+  text-shadow: 0 0 4px #0008;
+}
+
+.links-list {
+    width: 100%;
+    max-width: 760px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 22px;
+    margin: 0 auto;
+  }
+  
+  /* So cards take full width in their grid cell */
+  .link-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Responsive: 1 per row on mobile */
+  @media (max-width: 750px) {
+    .links-list {
+      grid-template-columns: 2fr;
+      max-width: 97vw;
+    }
+  }
+  
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 28px;
+  border-radius: 24px;
+  background: rgba(25, 3, 50, 0.95);
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.17);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.13s, box-shadow 0.18s;
+  border: 2px solid transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.link-card i {
+  font-size: 1.7em;
+  width: 38px;
+  text-align: center;
+  filter: drop-shadow(0 0 6px #000c);
+  transition: transform 0.18s;
+}
+
+.link-card:hover {
+  background: linear-gradient(90deg, #ff00ff 0, #00ffff 100%);
+  color: #220043;
+  transform: scale(1.035) translateY(-2px);
+  box-shadow: 0 6px 28px 0 rgba(0, 0, 0, 0.24), 0 0 8px #ff00ffcc;
+  border-color: #00ffff;
+}
+
+.link-card:hover i {
+  transform: scale(1.2) rotate(-7deg);
+}
+
+.link-card span {
+  z-index: 2;
+  position: relative;
+}
+
+/* Custom icon colors per platform */
+.link-card.twitch i {
+  color: #9146ff;
+}
+.link-card.youtube i {
+  color: #ff3131;
+}
+.link-card.discord i {
+  color: #7289da;
+}
+.link-card.instagram i {
+  color: #f58529;
+}
+.link-card.twitter i {
+  color: #1da1f2;
+}
+.link-card.tiktok i {
+  color: #69c9d0;
+}
+.link-card.patreon i {
+  color: #ff424d;
+}
+.link-card.kofi i {
+  color: #29abe0;
+}
+.link-card.streamlabs i {
+  color: #00ffb3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .links-list {
+    max-width: 97vw;
+  }
+  .profile-username {
+    font-size: 1.25em;
+  }
+  .link-card {
+    font-size: 1em;
+    padding: 14px 12px;
+  }
+  .profile-avatar {
+    width: 72px;
+    height: 72px;
+  }
+}

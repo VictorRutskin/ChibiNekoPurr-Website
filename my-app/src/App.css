@@ -5,7 +5,7 @@ body {
   color: #ffffff;
   overflow-x: hidden;
   animation: fadeIn 1s ease-in;
-  background-image: url("./images/neko-pattern.png");
+  /* background-image: url("./images/neko-pattern.png"); */
 }
 
 @keyframes fadeIn {
@@ -129,14 +129,30 @@ a:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
 }
-
 .links-box {
   background-color: #220043;
-  padding: 20px;
-  border: 1px solid #ff00ff;
-  border-radius: 10px;
-  margin-bottom: 40px;
-  animation: fadeIn 0.6s ease-in-out;
+  padding: 25px;
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+  animation: fadeIn 1.2s ease-in;
+}
+
+.links-box h2 {
+  color: #ffffff;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.links-box h2::before {
+  content: "\f14c"; /* Font Awesome external-link-alt icon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ff00ff;
 }
 
 .links-box ul {
@@ -145,15 +161,53 @@ a:hover {
 }
 
 .links-box li {
-  background-color: #2f004f;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  background-color: #2d004d;
+  margin: 12px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.links-box li i {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+  filter: drop-shadow(0 0 4px #000);
+}
+
+.links-box li.twitch i {
+  color: #9146ff;
+}
+
+.links-box li.youtube i {
+  color: #ff0000;
+}
+
+.links-box li.discord i {
+  color: #5865f2;
 }
 
 .links-box li:hover {
-  background-color: #3f005f;
+  background-color: #3a005a;
+}
+
+.links-box a {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #00ffff;
+  transition: color 0.3s;
+}
+
+.links-box a:hover {
+  color: #ffffff;
 }
 
 .support {
