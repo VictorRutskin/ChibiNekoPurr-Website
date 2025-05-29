@@ -4,7 +4,12 @@
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
-  background: radial-gradient(ellipse at top, #3f006f 0%, #150032 70%, #110020 100%);
+  background: radial-gradient(
+    ellipse at top,
+    #3f006f 0%,
+    #150032 70%,
+    #110020 100%
+  );
   animation: fadeIn 1.2s;
 }
 
@@ -44,8 +49,12 @@
   letter-spacing: 1px;
 }
 @keyframes cyber-glow {
-  from { text-shadow: 0 0 12px #ff00ff, 0 0 8px #00ffff, 0 0 3px #fff;}
-  to { text-shadow: 0 0 24px #00ffff, 0 0 12px #ff00ff, 0 0 9px #fff;}
+  from {
+    text-shadow: 0 0 12px #ff00ff, 0 0 8px #00ffff, 0 0 3px #fff;
+  }
+  to {
+    text-shadow: 0 0 24px #00ffff, 0 0 12px #ff00ff, 0 0 9px #fff;
+  }
 }
 
 .profile-bio {
@@ -59,9 +68,9 @@
 /* GRID: 3 per row desktop, 2 on tablet, 1 on mobile */
 .links-list {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   margin: 10px auto 0 auto;
   justify-items: center;
@@ -103,7 +112,7 @@
   color: #fff;
   font-size: 1.17em;
   font-weight: 600;
-  box-shadow: 0 2px 24px rgba(255,0,255,0.08);
+  box-shadow: 0 2px 24px rgba(255, 0, 255, 0.08);
   text-decoration: none;
   transition: background 0.18s, transform 0.13s, box-shadow 0.19s, color 0.18s;
   border: 2px solid #2a0046;
@@ -123,7 +132,8 @@
 }
 
 /* ICONS */
-.link-card i, .link-card .custom-link-icon {
+.link-card i,
+.link-card .custom-link-icon {
   font-size: 1.7em;
   width: 38px;
   text-align: center;
@@ -131,7 +141,8 @@
   transition: transform 0.18s;
 }
 
-.link-card:hover i, .link-card:hover .custom-link-icon {
+.link-card:hover i,
+.link-card:hover .custom-link-icon {
   transform: scale(1.17) rotate(-7deg);
 }
 
@@ -145,15 +156,36 @@
   box-shadow: 0 0 7px #ff00ff33;
 }
 
-.link-card.patreon i     { color: #ff424d; }
-.link-card.throne .custom-link-icon { background: none; }
-.link-card.kofi i        { color: #29abe0; }
-.link-card.twitch i      { color: #9146ff; }
-.link-card.streamlabs i  { color: #00ffb3; }
-.link-card.youtube i     { color: #ff3131; }
-.link-card.discord i     { color: #7289da; }
-.link-card.instagram i   { color: #f58529; }
-.link-card.X i           { color: #fff; background: #191919; border-radius: 8px; padding: 4px 8px;}
+.link-card.patreon i {
+  color: #ff424d;
+}
+.link-card.throne .custom-link-icon {
+  background: none;
+}
+.link-card.kofi i {
+  color: #29abe0;
+}
+.link-card.twitch i {
+  color: #9146ff;
+}
+.link-card.streamlabs i {
+  color: #00ffb3;
+}
+.link-card.youtube i {
+  color: #ff3131;
+}
+.link-card.discord i {
+  color: #7289da;
+}
+.link-card.instagram i {
+  color: #f58529;
+}
+.link-card.X i {
+  color: #fff;
+  background: #191919;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
 /* Add any custom icon color tweaks as you wish */
 
 /* SUPPORT SECTION */
@@ -186,8 +218,14 @@
 
 /* Subtle fade-in for page load */
 @keyframes fadeIn {
-  from { opacity: 0; filter: blur(2px);}
-  to   { opacity: 1; filter: blur(0);}
+  from {
+    opacity: 0;
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
 .profile-card {
@@ -252,8 +290,12 @@
 }
 
 @keyframes cyber-glow {
-  from { text-shadow: 0 0 12px #ff00ff, 0 0 8px #00ffff, 0 0 3px #fff;}
-  to { text-shadow: 0 0 24px #00ffff, 0 0 12px #ff00ff, 0 0 9px #fff;}
+  from {
+    text-shadow: 0 0 12px #ff00ff, 0 0 8px #00ffff, 0 0 3px #fff;
+  }
+  to {
+    text-shadow: 0 0 24px #00ffff, 0 0 12px #ff00ff, 0 0 9px #fff;
+  }
 }
 
 .profile-bio {
@@ -280,6 +322,46 @@
     min-width: 90px;
     min-height: 90px;
   }
-  .profile-username { font-size: 1.3em; }
-  .profile-bio { font-size: 0.97em; max-width: 95vw;}
+  .profile-username {
+    font-size: 1.3em;
+  }
+  .profile-bio {
+    font-size: 0.97em;
+    max-width: 95vw;
+  }
 }
+/* Already present, but add these tweaks for best results */
+.twitch-embed-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2.5rem auto 1.5rem auto;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 24px #9146ff33, 0 0 8px #00ffff22;
+  background: #12002e;
+  border: 2px solid #9146ff;
+  animation: fadeIn 1.2s;
+}
+
+/* Schedule link in profile card */
+.schedule-link {
+  display: inline-block;
+  margin-top: 0.8em;
+  font-size: 1.07em;
+  font-weight: 500;
+  color: #00ffff;
+  background: rgba(16, 0, 32, 0.8);
+  border: 1.5px solid #00ffff99;
+  padding: 7px 20px;
+  border-radius: 22px;
+  box-shadow: 0 0 8px #00ffff55;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: background 0.19s, color 0.18s, box-shadow 0.21s;
+}
+.schedule-link:hover {
+  background: linear-gradient(90deg, #ff00ff 0, #00ffff 100%);
+  color: #150032;
+  box-shadow: 0 0 22px #ff00ff99;
+}
+

@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../Styles/Home.css";
 import ChibiAvatar from "../images/Chibi.jpg";
 import throne from "../images/throne.png";
+import ProfileStream from "../Components//ProfileStream";
 
 const links = [
   {
@@ -16,8 +17,8 @@ const links = [
     label: "Throne",
     url: "https://throne.com/chibinekopurr",
     icon: "custom-throne",
-    className: "throne"
-  },  
+    className: "throne",
+  },
   {
     label: "Ko-Fi",
     url: "https://ko-fi.com/ChibiNekoPurr",
@@ -65,35 +66,31 @@ const links = [
 export default function Links() {
   return (
     <div className="links-page-bg">
-<div className="profile-card">
-  <img
-    src={ChibiAvatar}
-    alt="ChibiNekoPurr Avatar"
-    className="profile-avatar"
-  />
-  <div className="profile-info">
-    <h1 className="profile-username">@ChibiNekoPurr</h1>
-    <p className="profile-bio">
-      Streamer, cosplayer, game developer, gamer! she/her{" "}
-      <span role="img" aria-label="heart">
-        💜
-      </span>
-    </p>
-  </div>
-</div>
+      <ProfileStream />
 
+    
+
+      {/* SOCIAL / DONATION LINKS */}
       <div className="links-list">
-      {links.map(link => (
-  <a key={link.label} className={`link-card ${link.className}`} href={link.url} target="_blank" rel="noopener noreferrer">
-    {link.icon === "custom-throne" ? (
-      <img src={require('../images/throne.png')} alt="Throne" className="custom-link-icon" />
-    ) : (
-      <i className={link.icon}></i>
-    )}
-    <span>{link.label}</span>
-  </a>
-))}
+        {links.map((link) => (
+          <a
+            key={link.label}
+            className={`link-card ${link.className}`}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {link.icon === "custom-throne" ? (
+              <img src={throne} alt="Throne" className="custom-link-icon" />
+            ) : (
+              <i className={link.icon}></i>
+            )}
+            <span>{link.label}</span>
+          </a>
+        ))}
       </div>
+
+      {/* SUPPORT SECTION */}
       <section className="support">
         <h2>Support the Stream</h2>
         <p>Your support helps keep the streams running and evolving.</p>
