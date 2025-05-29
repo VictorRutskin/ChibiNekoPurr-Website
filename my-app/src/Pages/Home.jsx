@@ -65,20 +65,23 @@ const links = [
 export default function Links() {
   return (
     <div className="links-page-bg">
-      <div className="links-profile">
-        <img
-          src={ChibiAvatar}
-          alt="ChibiNekoPurr Avatar"
-          className="profile-avatar"
-        />
-        <h1 className="profile-username">@ChibiNekoPurr</h1>
-        <p className="profile-bio">
-          Streamer, cosplayer, game developer, gamer! she/her{" "}
-          <span role="img" aria-label="heart">
-            💜
-          </span>
-        </p>
-      </div>
+<div className="profile-card">
+  <img
+    src={ChibiAvatar}
+    alt="ChibiNekoPurr Avatar"
+    className="profile-avatar"
+  />
+  <div className="profile-info">
+    <h1 className="profile-username">@ChibiNekoPurr</h1>
+    <p className="profile-bio">
+      Streamer, cosplayer, game developer, gamer! she/her{" "}
+      <span role="img" aria-label="heart">
+        💜
+      </span>
+    </p>
+  </div>
+</div>
+
       <div className="links-list">
       {links.map(link => (
   <a key={link.label} className={`link-card ${link.className}`} href={link.url} target="_blank" rel="noopener noreferrer">
@@ -94,7 +97,7 @@ export default function Links() {
       <section className="support">
         <h2>Support the Stream</h2>
         <p>Your support helps keep the streams running and evolving.</p>
-        <button className="button">Donate & Support</button>
+        {/* <button className="button">Donate & Support</button> */}
       </section>
     </div>
   );
