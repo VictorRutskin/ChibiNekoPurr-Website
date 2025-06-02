@@ -2,9 +2,9 @@ import React from "react";
 import "../App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../Styles/Home.css";
-import ChibiAvatar from "../images/Chibi.jpg";
 import throne from "../images/throne.png";
 import ProfileStream from "../Components//ProfileStream";
+import "../Styles/Home.css";
 
 const links = [
   {
@@ -55,12 +55,12 @@ const links = [
     icon: "fab fa-instagram",
     className: "instagram",
   },
-  {
-    label: "X (Twitter)",
-    url: "https://twitter.com/ChibiNekoPurr",
-    icon: "fab fa-x-twitter",
-    className: "X",
-  },
+  // {
+  //   label: "X (Twitter)",
+  //   url: "https://twitter.com/ChibiNekoPurr",
+  //   icon: "fab fa-x-twitter",
+  //   className: "X",
+  // },
 ];
 
 export default function Links() {

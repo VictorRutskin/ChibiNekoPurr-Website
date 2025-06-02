@@ -1,0 +1,58 @@
+.page {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease-in;
+  }
+  .title {
+    text-align: center;
+    color: #ff00ff;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  .wiki {
+    display: flex;
+    margin-top: 20px;
+  }
+  .wiki-sidebar {
+    width: 200px;
+    background-color: #1b0030;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    animation: slideInLeft 0.5s ease-out;
+  }
+  .wiki-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .wiki-sidebar li {
+    padding: 8px 0;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .wiki-sidebar li:hover {
+    color: #00ffff;
+  }
+  .wiki-content {
+    flex: 1;
+    background-color: #220043;
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 0.8s ease-in;
+  }
+  .dev-log {
+    margin-top: 40px;
+  }
+  .log-item {
+    background-color: #2f004f;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #00ffff;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+  }
+  .log-item:hover {
+    transform: scale(1.02);
+  }
+  

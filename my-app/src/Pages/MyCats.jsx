@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "../Styles/MyCats.css";
 
 export default function MyCats() {
   return (

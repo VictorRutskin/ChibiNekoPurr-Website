@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "../Styles/GameWiki.css";
 
 export default function GameWiki() {
   return (

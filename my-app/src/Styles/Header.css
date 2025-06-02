@@ -1,0 +1,222 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1d0033;
+    border-bottom: 2px solid #ff00ff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideInDown 0.5s ease-out;
+  }
+  
+  .nav-main {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  .highlight {
+    color: #00ffff;
+    font-weight: bold;
+  }
+  
+  /* 1. All nav-links (including dropdown trigger) get cyber effect */
+  .nav-link {
+    margin: 0 10px;
+    color: #ffffff;
+    transition: color 0.3s, text-shadow 0.2s;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    overflow: hidden;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  
+  .nav-link::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #00ffff;
+    z-index: -1;
+    opacity: 0.6;
+    clip-path: inset(0 0 0 0);
+    animation: letter-glitch 1.2s infinite linear alternate-reverse,
+    letter-jump 3s infinite ease-in-out;
+    font-weight: bold;
+    filter: blur(0.8px);
+    pointer-events: none;
+  }
+  
+  .nav-link:hover {
+    color: #ff00ff;
+    animation: soft-glitch 1s infinite;
+  }
+  
+  /* Games dropdown as part of nav, perfectly aligned */
+  .games-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .games-dropdown > .nav-link {
+    margin: 0 10px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+  }
+  
+  /* Arrow icon animated */
+  .chev-icon {
+    margin-left: 4px;
+    font-size: 0.95em;
+    transition: transform 0.21s cubic-bezier(.77,0,.18,1);
+  }
+  .games-dropdown.open .chev-icon {
+    transform: rotate(-180deg) scale(1.12);
+    color: #00ffff;
+    filter: drop-shadow(0 0 8px #ff00ff88);
+  }
+  
+  /* Dropdown menu styles */
+  .games-dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 100%; /* Always appear just below */
+    background: #1d0033ee;
+    border: 1.5px solid #ff00ff;
+    border-radius: 13px;
+    min-width: 200px;
+    box-shadow: 0 4px 18px #000c, 0 0 12px #ff00ff33;
+    z-index: 9999;
+    padding: 5px 0;
+    animation: fadeIn 0.22s;
+    display: none;
+  }
+  
+  .games-dropdown.open .games-dropdown-menu,
+  .games-dropdown-menu.show {
+    display: block;
+  }
+  
+  /* Dropdown item: cyber effect, looks like the rest! */
+  .games-dropdown-item {
+    display: block;
+    padding: 14px 26px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.17s, color 0.18s;
+    font-size: 1.07em;
+    border-radius: 7px;
+    position: relative;
+  }
+  .games-dropdown-item::after {
+    display: none !important; /* Don't double-glitch dropdown items unless you want */
+  }
+  
+  .games-dropdown-item:hover,
+  .games-dropdown-item:focus {
+    background: linear-gradient(90deg, #ff00ff 0, #00ffff 100%);
+    color: #12002e;
+    outline: none;
+  }
+  
+ /* ==== Modern Glitch for nav-link ==== */
+.nav-link {
+    position: relative;
+    margin: 0 10px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: color 0.22s;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .nav-link::before,
+  .nav-link::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 2;
+    font-weight: 600;
+    transition: opacity 0.2s;
+    filter: blur(0.6px);
+  }
+  .nav-link::before {
+    color: #00ffff;
+    animation: nav-glitch-1 2.2s infinite linear alternate-reverse;
+    mix-blend-mode: lighten;
+  }
+  .nav-link::after {
+    color: #ff00ff;
+    animation: nav-glitch-2 2.8s infinite linear alternate;
+    mix-blend-mode: lighten;
+  }
+  
+  /* On hover: main text goes magenta, glitch layers jump harder */
+  .nav-link:hover {
+    color: #ff00ff;
+  }
+  .nav-link:hover::before {
+    opacity: 0.88;
+    animation-duration: 0.33s;
+    animation-timing-function: cubic-bezier(.68,-0.6,.32,1.6);
+  }
+  .nav-link:hover::after {
+    opacity: 0.88;
+    animation-duration: 0.25s;
+    animation-timing-function: cubic-bezier(.68,-0.6,.32,1.6);
+  }
+  
+  /* Optional: focus glitch too for accessibility */
+  .nav-link:focus::before,
+  .nav-link:focus::after {
+    opacity: 0.95;
+    animation-duration: 0.33s;
+  }
+  
+  @keyframes nav-glitch-1 {
+    0% { transform: translate(0px,0px) scaleY(1);}
+    7% { transform: translate(-1.5px,1.1px) scaleY(1.05);}
+    15% { transform: translate(-2.5px,-0.5px) scaleY(0.92);}
+    22% { transform: translate(2.5px,1px) scaleY(1);}
+    38% { transform: translate(-2px,-2px) scaleY(1.07);}
+    51% { transform: translate(0.5px,1.5px) scaleY(0.98);}
+    65% { transform: translate(1.5px,0.5px) scaleY(1);}
+    80% { transform: translate(-2px,2.5px) scaleY(1.05);}
+    100% { transform: translate(0px,0px) scaleY(1);}
+  }
+  @keyframes nav-glitch-2 {
+    0% { transform: translate(0px,0px) scaleY(1);}
+    12% { transform: translate(2.5px,-1px) scaleY(1.1);}
+    22% { transform: translate(-2px,1px) scaleY(0.93);}
+    37% { transform: translate(2px,2px) scaleY(0.95);}
+    54% { transform: translate(-2.5px,-2.5px) scaleY(1);}
+    71% { transform: translate(2px,-1.5px) scaleY(1.07);}
+    85% { transform: translate(-1.5px,1.5px) scaleY(1);}
+    100% { transform: translate(0px,0px) scaleY(1);}
+  }
+  

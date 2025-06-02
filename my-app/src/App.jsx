@@ -14,9 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cats" element={<MyCats />} />
-        <Route path="/wiki" element={<GameWiki />} />
+        <Route path="/Catropolis-Quest" element={<GameWiki />} />
         <Route path="*" element={<Home />} />
-
       </Routes>
       <Footer />
     </BrowserRouter>
