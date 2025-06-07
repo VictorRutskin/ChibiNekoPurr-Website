@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ChibiNekoPurr-Website/static/css/main.0d3464ec.css",
-    "main.js": "/ChibiNekoPurr-Website/static/js/main.eb488163.js",
+    "main.js": "/ChibiNekoPurr-Website/static/js/main.da725b90.js",
     "static/media/Chibi.jpg": "/ChibiNekoPurr-Website/static/media/Chibi.3df85f030372983afed5.jpg",
     "static/media/throne.png": "/ChibiNekoPurr-Website/static/media/throne.09e3a56bac3155df7ccb.png",
     "static/media/fa-solid-900.ttf": "/ChibiNekoPurr-Website/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
@@ -14,10 +14,10 @@
     "static/media/fa-v4compatibility.woff2": "/ChibiNekoPurr-Website/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/ChibiNekoPurr-Website/index.html",
     "main.0d3464ec.css.map": "/ChibiNekoPurr-Website/static/css/main.0d3464ec.css.map",
-    "main.eb488163.js.map": "/ChibiNekoPurr-Website/static/js/main.eb488163.js.map"
+    "main.da725b90.js.map": "/ChibiNekoPurr-Website/static/js/main.da725b90.js.map"
   },
   "entrypoints": [
     "static/css/main.0d3464ec.css",
-    "static/js/main.eb488163.js"
+    "static/js/main.da725b90.js"
   ]
 }
