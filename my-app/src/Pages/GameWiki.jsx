@@ -17,10 +17,28 @@ export default function GameWiki() {
         </aside>
         <main className="wiki-content">
           <h2>Catropolis Quest: Key Characters</h2>
-          <p><strong>Whiskerwind the Brave</strong> - The main protagonist...</p>
-          <p><strong>Shadowclaw the Mysterious</strong> - A secretive rogue...</p>
+          <p>
+            <strong>Whiskerwind the Brave</strong> - The main protagonist...
+          </p>
+          <p>
+            <strong>Shadowclaw the Mysterious</strong> - A secretive rogue...
+          </p>
         </main>
       </div>
+
+      {/* Inline YouTube Video */}
+      <section className="yt-section">
+        <h2>Gameplay Video</h2>
+        <div className="yt-container">
+          <iframe
+            src="https://www.youtube.com/embed/dTvKvnY4Ajs?si=1"
+            title="Catropolis Quest Gameplay"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </section>
 
       <section className="dev-log">
         <h2>Dev Log & Progress</h2>
