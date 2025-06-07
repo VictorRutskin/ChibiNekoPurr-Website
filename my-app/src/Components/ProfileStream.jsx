@@ -7,12 +7,18 @@ export default function ProfileStream() {
     <div className="profile-stream-card lr-layout">
       {/* Profile (Left) */}
       <div className="profile-block">
-        <img src={ChibiAvatar} alt="ChibiNekoPurr Avatar" className="profile-avatar" />
+        <img
+          src={ChibiAvatar}
+          alt="ChibiNekoPurr Avatar"
+          className="profile-avatar"
+        />
         <div className="profile-text-block">
           <h1 className="profile-username">@ChibiNekoPurr</h1>
           <p className="profile-bio">
             Streamer, cosplayer, game developer, gamer! she/her{" "}
-            <span role="img" aria-label="heart">💜</span>
+            <span role="img" aria-label="heart">
+              💜
+            </span>
           </p>
           <a
             href="https://www.twitch.tv/chibinekopurr/schedule"
@@ -28,7 +34,7 @@ export default function ProfileStream() {
       {/* Stream (Right) */}
       <div className="stream-embed-block">
         <iframe
-          src="https://player.twitch.tv/?channel=chibinekopurr&parent=localhost"
+          src="https://player.twitch.tv/?channel=chibinekopurr&parent=victorrutskin.github.io"
           height="400"
           width="100%"
           allowFullScreen={true}
